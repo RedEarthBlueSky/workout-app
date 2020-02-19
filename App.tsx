@@ -1,19 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
-export default function App() {
+import IsBrowser from './src/components/IsBrowser'
+import styles from './styles'
+
+const App = () => {
+  const { h2, browserStyles, container } = styles
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <View style={container}>
+      <Text style={h2}>Open App.tsx to work on your</Text>
+      <IsBrowser
+        web='Web App!'
+        mobile='Mobile App!'
+      />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
