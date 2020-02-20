@@ -5,7 +5,7 @@ import IsBrowser from './src/components/IsBrowser'
 import styles from './styles'
 
 const App = () => {
-  const { h2, browserStyles, container } = styles
+  const { h2, container } = styles
   return (
     <View style={container}>
       <Text style={h2}>Open App.tsx to work on your</Text>
