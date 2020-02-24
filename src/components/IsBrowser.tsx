@@ -8,7 +8,12 @@ import styles from '../../styles'
 
 const browser = detect()
 
-const IsBrowser = ({ web, mobile }) => {
+interface Props {
+  web: string
+  mobile: string
+}
+
+const IsBrowser: React.FC<Props> = ({ web, mobile }) => {
   if (browser) {
     return (
       <View>
@@ -19,4 +24,4 @@ const IsBrowser = ({ web, mobile }) => {
   return <View><AppMobile styles={styles} content={mobile} /></View>
 }
 
-export default IsBrowser
+export { IsBrowser }
