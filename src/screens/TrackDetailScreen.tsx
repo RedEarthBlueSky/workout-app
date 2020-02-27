@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const TrackDetailScreen = () => {
   return (
     <View>
-      <Text>Sign Up Screen</Text>
+      <Text style={{fontSize: 32}}>Track Detail Screen</Text>
     </View>
   )
 }

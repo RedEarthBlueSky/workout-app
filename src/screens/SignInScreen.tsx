@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const SignInScreen = () => {
   return (
     <View>
-      <Text>Sign Up Screen</Text>
+      <Text style={{fontSize: 32}}>Sign Ip Screen</Text>
     </View>
   )
 }

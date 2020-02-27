@@ -1,9 +1,13 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
 
 const AppMobile = ({ styles, content }) => {
     const { h2, browserStyles } = styles
-    return <Text style={[h2, browserStyles]}>{content}</Text>
+    return (
+      <View>
+        <Text style={[h2, browserStyles]}>{content}</Text>
+      </View>
+    )
 }
 
 export { AppMobile }
