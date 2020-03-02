@@ -3,11 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Button, Header } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-const buttons = [
-                  {title: 'Sign Up/Sign In', nav: 'loginFlow'},
-                  {title: 'View My Tracks', nav: 'mainFlow'},
-                  {title: 'Sign Up/Sign In', nav: 'AccountScreen'},
-                ]
+const buttons = [ {title: 'Sign Up/Sign In', nav: 'loginFlow'}, {title: 'View My Tracks', nav: 'mainFlow'}, {title: 'My Account', nav: 'Account'} ]
 
 const HomeScreen = ({ navigation }) => {
   const makeButtons = () => {

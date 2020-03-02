@@ -9,6 +9,12 @@ const TrackListScreen = ({ navigation }) => {
         title='Go to Track Detail'
         onPress={() => navigation.navigate('TrackDetail')}
       />
+      <Button
+        title='Home'
+        onPress={() => navigation.navigate('Home')}
+        type='solid'
+        raised
+      />
     </View>
   )
 }
