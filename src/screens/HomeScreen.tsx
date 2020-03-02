@@ -3,7 +3,27 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Button, Header } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
+const buttons = [
+                  {title: 'Sign Up/Sign In', nav: 'loginFlow'},
+                  {title: 'View My Tracks', nav: 'mainFlow'},
+                  {title: 'Sign Up/Sign In', nav: 'AccountScreen'},
+                ]
+
 const HomeScreen = ({ navigation }) => {
+  const makeButtons = () => {
+    return buttons.map((button, index) => {
+      return (
+        <Button
+          key={index}
+          title={button.title}
+          onPress={() => navigation.navigate(button.nav)}
+          type='solid'
+          raised
+          style={styles.buttonStyles}
+        />
+      )
+    })
+  }
   return (
     <View>
       <Header
@@ -13,27 +33,7 @@ const HomeScreen = ({ navigation }) => {
         rightComponent={{ icon: 'home', color: '#fff' }}
       />
       <Text style={{fontSize: 32}}>Home Main Screen</Text>
-      <Button
-        title='Sign Up/Sign In'
-        onPress={() => navigation.navigate('loginFlow')}
-        type='solid'
-        raised
-        style={styles.buttonStyles}
-      />
-      <Button
-        title='View My Tracks'
-        onPress={() => navigation.navigate('mainFlow')}
-        type='solid'
-        raised
-        style={styles.buttonStyles}
-      />
-      <Button
-        title='My Account '
-        onPress={() => navigation.navigate('AccountScreen')}
-        type='solid'
-        raised
-        style={styles.buttonStyles}
-      />
+      {makeButtons()}
     </View>
   )
 }

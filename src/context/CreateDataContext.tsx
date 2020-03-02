@@ -4,9 +4,9 @@ interface Props {
   reducer: Function
   actions: Object
   defaultValue: boolean
-  children: React.FC,
-  key: string,
-  state: Object,
+  children: React.FC
+  key: string
+  state: Object
   dispatch: Object
 }
 
