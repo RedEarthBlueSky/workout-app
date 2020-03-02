@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text } from 'react-native'
+import { Button } from 'react-native-elements'
 
 const AccountScreen = ({ navigation }) => {
   return (
@@ -8,6 +9,14 @@ const AccountScreen = ({ navigation }) => {
       <Button
         title='Go to Track List Flow'
         onPress={() => navigation.navigate('trackListFlow')}
+        type='solid'
+        raised
+      />
+      <Button
+        title='Home'
+        onPress={() => navigation.navigate('Home')}
+        type='solid'
+        raised
       />
     </View>
   )

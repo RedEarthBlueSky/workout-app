@@ -9,9 +9,9 @@ const authReducer = (state, action) => {
 
 //  Sign Out action function
 const signout = ({ dispatch }) => {
-  return (
-    //  somehow sign out
-  )
+  // return (
+  //   //  somehow sign out
+  // )
 }
 
 //  Sign In action function

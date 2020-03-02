@@ -41,6 +41,20 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
+
+***********************************************
+***********************************************
 Pattern title
 Expression
 ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$
+***********************************************
+***********************************************
+ngrok
+secures contact between external device and express api via URL
+must have a separate screen
+
+***********************************************
+***********************************************
+
+***********************************************
+***********************************************
