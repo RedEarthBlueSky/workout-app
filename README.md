@@ -51,7 +51,21 @@ Expression
 ***********************************************
 ngrok
 secures contact between external device and express api via URL
-must have a separate screen
+must have a separate terminal
+
+run with the port express is using
+> ngrok http 'port #'
+
+gives you the forwarding addresss ie http://719cf9cb.ngrok.io
+but needs to be reset every 8 hours.
+
+NOTE
+1. ngrok and the Express API have to be running at all times
+2. Axios's baseURL needs to point at the ngrok URL
+3. That URL changes every 8 hours and has to be updated in the Tracker api file
+4. A common moongoose failure to connect error is because we have to
+add our IP address to the mongoDB.Atlas while paper security
+
 
 ***********************************************
 ***********************************************

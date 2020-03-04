@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { Button, Text, Input } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-import { Spacer } from '../components'
-
-import { IsBrowser } from '../components'
+import { Spacer, IsBrowser } from '../components'
+import { Context as AuthContext } from '../context/AuthContext'
 
 const SignUpScreen = ({ navigation }) => {
+  const { state, signup } = useContext(AuthContext)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navTo = (nav) => {
     navigation.navigate(nav)
   }
+
   return (
     <View style={styles.container}>
       <Text h3>Sign Up Screen</Text>
@@ -35,7 +36,15 @@ const SignUpScreen = ({ navigation }) => {
       />
       <Text>* Password must contain at least one Uppercase letter, one lowercase and one number, be at least 8 characters long and no more than 15.</Text>
       <Spacer />
-      <Button title="Sign Up" />
+      {
+        state.errorMessage
+        ? <Text style={styles.errorStyle}>{state.errorMessage}</Text>
+        : null
+      }
+      <Button
+        title="Sign Up"
+        onPress={() => signup({ email, password })}
+      />
       <Spacer />
       <Text h4>Menu</Text>
       <Button
@@ -63,12 +72,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
     padding: 20,
-  }
+  },
+  errorStyle: {
+    fontSize: 22,
+    color: 'red',
+    justifyContent: 'center',
+  },
 })
 
 SignUpScreen.navigationOptions = () => {
   return {
-    header: null
+    headerShown: false
   }
 }
 
